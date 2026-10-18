@@ -1,0 +1,11 @@
+{"name": "interactive-mix", "jobs": [
+ {"id": "batch1", "arrival": 0, "burst": 60, "priority": 4},
+ {"id": "batch2", "arrival": 5, "burst": 45, "priority": 4},
+ {"id": "edit1", "arrival": 8, "burst": 2, "priority": 0},
+ {"id": "edit2", "arrival": 20, "burst": 3, "priority": 0},
+ {"id": "shell1", "arrival": 21, "burst": 1, "priority": 1},
+ {"id": "edit3", "arrival": 40, "burst": 2, "priority": 0},
+ {"id": "compile", "arrival": 42, "burst": 20, "priority": 2},
+ {"id": "shell2", "arrival": 70, "burst": 1, "priority": 1},
+ {"id": "edit4", "arrival": 90, "burst": 2, "priority": 0},
+ {"id": "idle-gap", "arrival": 200, "burst": 5, "priority": 3}]}

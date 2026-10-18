@@ -1,0 +1,6 @@
+{"name": "silberschatz-priority", "jobs": [
+ {"id": "P1", "arrival": 0, "burst": 10, "priority": 3},
+ {"id": "P2", "arrival": 0, "burst": 1, "priority": 1},
+ {"id": "P3", "arrival": 0, "burst": 2, "priority": 4},
+ {"id": "P4", "arrival": 0, "burst": 1, "priority": 5},
+ {"id": "P5", "arrival": 0, "burst": 5, "priority": 2}]}

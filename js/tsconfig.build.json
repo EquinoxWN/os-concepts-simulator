@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "allowImportingTsExtensions": false,
+    "rewriteRelativeImportExtensions": true,
+    "types": [],
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "include": ["src/engine", "src/worker.ts", "src/web"]
+}

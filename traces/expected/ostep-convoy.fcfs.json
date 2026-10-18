@@ -1,0 +1,58 @@
+{
+ "algorithm": "fcfs",
+ "jobs": [
+  {
+   "completion": 100,
+   "id": "A",
+   "response": 0,
+   "slowdown": 1.0,
+   "turnaround": 100,
+   "waiting": 0
+  },
+  {
+   "completion": 110,
+   "id": "B",
+   "response": 100,
+   "slowdown": 11.0,
+   "turnaround": 110,
+   "waiting": 100
+  },
+  {
+   "completion": 120,
+   "id": "C",
+   "response": 110,
+   "slowdown": 12.0,
+   "turnaround": 120,
+   "waiting": 110
+  }
+ ],
+ "quantum": null,
+ "summary": {
+  "dispatches": 3,
+  "fairness": 0.7218045112781954,
+  "makespan": 120,
+  "maxSlowdown": 12.0,
+  "meanResponse": 70.0,
+  "meanTurnaround": 110.0,
+  "meanWaiting": 70.0,
+  "utilization": 1.0
+ },
+ "timeline": [
+  {
+   "end": 100,
+   "job": "A",
+   "start": 0
+  },
+  {
+   "end": 110,
+   "job": "B",
+   "start": 100
+  },
+  {
+   "end": 120,
+   "job": "C",
+   "start": 110
+  }
+ ],
+ "trace": "ostep-convoy"
+}

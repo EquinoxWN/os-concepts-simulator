@@ -1,0 +1,674 @@
+{
+ "algorithm": "sjf",
+ "jobs": [
+  {
+   "completion": 261,
+   "id": "J0",
+   "response": 9,
+   "slowdown": 10.0,
+   "turnaround": 10,
+   "waiting": 9
+  },
+  {
+   "completion": 804,
+   "id": "J1",
+   "response": 381,
+   "slowdown": 13.7,
+   "turnaround": 411,
+   "waiting": 381
+  },
+  {
+   "completion": 442,
+   "id": "J2",
+   "response": 175,
+   "slowdown": 8.954545454545455,
+   "turnaround": 197,
+   "waiting": 175
+  },
+  {
+   "completion": 420,
+   "id": "J3",
+   "response": 8,
+   "slowdown": 1.5714285714285714,
+   "turnaround": 22,
+   "waiting": 8
+  },
+  {
+   "completion": 75,
+   "id": "J4",
+   "response": 7,
+   "slowdown": 1.5384615384615385,
+   "turnaround": 20,
+   "waiting": 7
+  },
+  {
+   "completion": 130,
+   "id": "J5",
+   "response": 54,
+   "slowdown": 4.6,
+   "turnaround": 69,
+   "waiting": 54
+  },
+  {
+   "completion": 511,
+   "id": "J6",
+   "response": 329,
+   "slowdown": 14.708333333333334,
+   "turnaround": 353,
+   "waiting": 329
+  },
+  {
+   "completion": 78,
+   "id": "J7",
+   "response": 0,
+   "slowdown": 1.0,
+   "turnaround": 2,
+   "waiting": 0
+  },
+  {
+   "completion": 559,
+   "id": "J8",
+   "response": 299,
+   "slowdown": 13.458333333333334,
+   "turnaround": 323,
+   "waiting": 299
+  },
+  {
+   "completion": 168,
+   "id": "J9",
+   "response": 66,
+   "slowdown": 4.3,
+   "turnaround": 86,
+   "waiting": 66
+  },
+  {
+   "completion": 313,
+   "id": "J10",
+   "response": 3,
+   "slowdown": 1.5,
+   "turnaround": 9,
+   "waiting": 3
+  },
+  {
+   "completion": 535,
+   "id": "J11",
+   "response": 329,
+   "slowdown": 14.708333333333334,
+   "turnaround": 353,
+   "waiting": 329
+  },
+  {
+   "completion": 487,
+   "id": "J12",
+   "response": 369,
+   "slowdown": 17.043478260869566,
+   "turnaround": 392,
+   "waiting": 369
+  },
+  {
+   "completion": 148,
+   "id": "J13",
+   "response": 6,
+   "slowdown": 1.4615384615384615,
+   "turnaround": 19,
+   "waiting": 6
+  },
+  {
+   "completion": 335,
+   "id": "J14",
+   "response": 253,
+   "slowdown": 12.5,
+   "turnaround": 275,
+   "waiting": 253
+  },
+  {
+   "completion": 59,
+   "id": "J15",
+   "response": 0,
+   "slowdown": 1.0,
+   "turnaround": 8,
+   "waiting": 0
+  },
+  {
+   "completion": 609,
+   "id": "J16",
+   "response": 334,
+   "slowdown": 13.846153846153847,
+   "turnaround": 360,
+   "waiting": 334
+  },
+  {
+   "completion": 464,
+   "id": "J17",
+   "response": 46,
+   "slowdown": 3.090909090909091,
+   "turnaround": 68,
+   "waiting": 46
+  },
+  {
+   "completion": 209,
+   "id": "J18",
+   "response": 67,
+   "slowdown": 4.190476190476191,
+   "turnaround": 88,
+   "waiting": 67
+  },
+  {
+   "completion": 406,
+   "id": "J19",
+   "response": 15,
+   "slowdown": 1.7142857142857142,
+   "turnaround": 36,
+   "waiting": 15
+  },
+  {
+   "completion": 774,
+   "id": "J20",
+   "response": 411,
+   "slowdown": 15.172413793103448,
+   "turnaround": 440,
+   "waiting": 411
+  },
+  {
+   "completion": 662,
+   "id": "J21",
+   "response": 620,
+   "slowdown": 23.962962962962962,
+   "turnaround": 647,
+   "waiting": 620
+  },
+  {
+   "completion": 381,
+   "id": "J22",
+   "response": 12,
+   "slowdown": 1.75,
+   "turnaround": 28,
+   "waiting": 12
+  },
+  {
+   "completion": 287,
+   "id": "J23",
+   "response": 0,
+   "slowdown": 1.0,
+   "turnaround": 5,
+   "waiting": 0
+  },
+  {
+   "completion": 385,
+   "id": "J24",
+   "response": 1,
+   "slowdown": 1.25,
+   "turnaround": 5,
+   "waiting": 1
+  },
+  {
+   "completion": 115,
+   "id": "J25",
+   "response": 38,
+   "slowdown": 4.166666666666667,
+   "turnaround": 50,
+   "waiting": 38
+  },
+  {
+   "completion": 188,
+   "id": "J26",
+   "response": 18,
+   "slowdown": 2.8,
+   "turnaround": 28,
+   "waiting": 18
+  },
+  {
+   "completion": 260,
+   "id": "J27",
+   "response": 40,
+   "slowdown": 3.5,
+   "turnaround": 56,
+   "waiting": 40
+  },
+  {
+   "completion": 635,
+   "id": "J28",
+   "response": 285,
+   "slowdown": 11.961538461538462,
+   "turnaround": 311,
+   "waiting": 285
+  },
+  {
+   "completion": 98,
+   "id": "J29",
+   "response": 23,
+   "slowdown": 3.3,
+   "turnaround": 33,
+   "waiting": 23
+  },
+  {
+   "completion": 135,
+   "id": "J30",
+   "response": 14,
+   "slowdown": 3.8,
+   "turnaround": 19,
+   "waiting": 14
+  },
+  {
+   "completion": 244,
+   "id": "J31",
+   "response": 14,
+   "slowdown": 2.4,
+   "turnaround": 24,
+   "waiting": 14
+  },
+  {
+   "completion": 62,
+   "id": "J32",
+   "response": 3,
+   "slowdown": 2.0,
+   "turnaround": 6,
+   "waiting": 3
+  },
+  {
+   "completion": 307,
+   "id": "J33",
+   "response": 17,
+   "slowdown": 1.85,
+   "turnaround": 37,
+   "waiting": 17
+  },
+  {
+   "completion": 225,
+   "id": "J34",
+   "response": 6,
+   "slowdown": 1.375,
+   "turnaround": 22,
+   "waiting": 6
+  },
+  {
+   "completion": 343,
+   "id": "J35",
+   "response": 18,
+   "slowdown": 3.25,
+   "turnaround": 26,
+   "waiting": 18
+  },
+  {
+   "completion": 689,
+   "id": "J36",
+   "response": 280,
+   "slowdown": 11.37037037037037,
+   "turnaround": 307,
+   "waiting": 280
+  },
+  {
+   "completion": 76,
+   "id": "J37",
+   "response": 2,
+   "slowdown": 3.0,
+   "turnaround": 3,
+   "waiting": 2
+  },
+  {
+   "completion": 365,
+   "id": "J38",
+   "response": 211,
+   "slowdown": 10.590909090909092,
+   "turnaround": 233,
+   "waiting": 211
+  },
+  {
+   "completion": 51,
+   "id": "J39",
+   "response": 6,
+   "slowdown": 1.75,
+   "turnaround": 14,
+   "waiting": 6
+  },
+  {
+   "completion": 583,
+   "id": "J40",
+   "response": 241,
+   "slowdown": 11.041666666666666,
+   "turnaround": 265,
+   "waiting": 241
+  },
+  {
+   "completion": 43,
+   "id": "J41",
+   "response": 0,
+   "slowdown": 1.0,
+   "turnaround": 5,
+   "waiting": 0
+  },
+  {
+   "completion": 234,
+   "id": "J42",
+   "response": 8,
+   "slowdown": 1.8888888888888888,
+   "turnaround": 17,
+   "waiting": 8
+  },
+  {
+   "completion": 745,
+   "id": "J43",
+   "response": 592,
+   "slowdown": 22.142857142857142,
+   "turnaround": 620,
+   "waiting": 592
+  },
+  {
+   "completion": 282,
+   "id": "J44",
+   "response": 8,
+   "slowdown": 1.380952380952381,
+   "turnaround": 29,
+   "waiting": 8
+  },
+  {
+   "completion": 178,
+   "id": "J45",
+   "response": 15,
+   "slowdown": 2.5,
+   "turnaround": 25,
+   "waiting": 15
+  },
+  {
+   "completion": 717,
+   "id": "J46",
+   "response": 583,
+   "slowdown": 21.821428571428573,
+   "turnaround": 611,
+   "waiting": 583
+  },
+  {
+   "completion": 88,
+   "id": "J47",
+   "response": 14,
+   "slowdown": 2.4,
+   "turnaround": 24,
+   "waiting": 14
+  },
+  {
+   "completion": 38,
+   "id": "J48",
+   "response": 0,
+   "slowdown": 1.0,
+   "turnaround": 24,
+   "waiting": 0
+  },
+  {
+   "completion": 103,
+   "id": "J49",
+   "response": 1,
+   "slowdown": 1.2,
+   "turnaround": 6,
+   "waiting": 1
+  }
+ ],
+ "quantum": null,
+ "summary": {
+  "dispatches": 50,
+  "fairness": 0.5035769518879483,
+  "makespan": 790,
+  "maxSlowdown": 23.962962962962962,
+  "meanResponse": 124.62,
+  "meanTurnaround": 140.42,
+  "meanWaiting": 124.62,
+  "utilization": 1.0
+ },
+ "timeline": [
+  {
+   "end": 14,
+   "job": null,
+   "start": 0
+  },
+  {
+   "end": 38,
+   "job": "J48",
+   "start": 14
+  },
+  {
+   "end": 43,
+   "job": "J41",
+   "start": 38
+  },
+  {
+   "end": 51,
+   "job": "J39",
+   "start": 43
+  },
+  {
+   "end": 59,
+   "job": "J15",
+   "start": 51
+  },
+  {
+   "end": 62,
+   "job": "J32",
+   "start": 59
+  },
+  {
+   "end": 75,
+   "job": "J4",
+   "start": 62
+  },
+  {
+   "end": 76,
+   "job": "J37",
+   "start": 75
+  },
+  {
+   "end": 78,
+   "job": "J7",
+   "start": 76
+  },
+  {
+   "end": 88,
+   "job": "J47",
+   "start": 78
+  },
+  {
+   "end": 98,
+   "job": "J29",
+   "start": 88
+  },
+  {
+   "end": 103,
+   "job": "J49",
+   "start": 98
+  },
+  {
+   "end": 115,
+   "job": "J25",
+   "start": 103
+  },
+  {
+   "end": 130,
+   "job": "J5",
+   "start": 115
+  },
+  {
+   "end": 135,
+   "job": "J30",
+   "start": 130
+  },
+  {
+   "end": 148,
+   "job": "J13",
+   "start": 135
+  },
+  {
+   "end": 168,
+   "job": "J9",
+   "start": 148
+  },
+  {
+   "end": 178,
+   "job": "J45",
+   "start": 168
+  },
+  {
+   "end": 188,
+   "job": "J26",
+   "start": 178
+  },
+  {
+   "end": 209,
+   "job": "J18",
+   "start": 188
+  },
+  {
+   "end": 225,
+   "job": "J34",
+   "start": 209
+  },
+  {
+   "end": 234,
+   "job": "J42",
+   "start": 225
+  },
+  {
+   "end": 244,
+   "job": "J31",
+   "start": 234
+  },
+  {
+   "end": 260,
+   "job": "J27",
+   "start": 244
+  },
+  {
+   "end": 261,
+   "job": "J0",
+   "start": 260
+  },
+  {
+   "end": 282,
+   "job": "J44",
+   "start": 261
+  },
+  {
+   "end": 287,
+   "job": "J23",
+   "start": 282
+  },
+  {
+   "end": 307,
+   "job": "J33",
+   "start": 287
+  },
+  {
+   "end": 313,
+   "job": "J10",
+   "start": 307
+  },
+  {
+   "end": 335,
+   "job": "J14",
+   "start": 313
+  },
+  {
+   "end": 343,
+   "job": "J35",
+   "start": 335
+  },
+  {
+   "end": 365,
+   "job": "J38",
+   "start": 343
+  },
+  {
+   "end": 381,
+   "job": "J22",
+   "start": 365
+  },
+  {
+   "end": 385,
+   "job": "J24",
+   "start": 381
+  },
+  {
+   "end": 406,
+   "job": "J19",
+   "start": 385
+  },
+  {
+   "end": 420,
+   "job": "J3",
+   "start": 406
+  },
+  {
+   "end": 442,
+   "job": "J2",
+   "start": 420
+  },
+  {
+   "end": 464,
+   "job": "J17",
+   "start": 442
+  },
+  {
+   "end": 487,
+   "job": "J12",
+   "start": 464
+  },
+  {
+   "end": 511,
+   "job": "J6",
+   "start": 487
+  },
+  {
+   "end": 535,
+   "job": "J11",
+   "start": 511
+  },
+  {
+   "end": 559,
+   "job": "J8",
+   "start": 535
+  },
+  {
+   "end": 583,
+   "job": "J40",
+   "start": 559
+  },
+  {
+   "end": 609,
+   "job": "J16",
+   "start": 583
+  },
+  {
+   "end": 635,
+   "job": "J28",
+   "start": 609
+  },
+  {
+   "end": 662,
+   "job": "J21",
+   "start": 635
+  },
+  {
+   "end": 689,
+   "job": "J36",
+   "start": 662
+  },
+  {
+   "end": 717,
+   "job": "J46",
+   "start": 689
+  },
+  {
+   "end": 745,
+   "job": "J43",
+   "start": 717
+  },
+  {
+   "end": 774,
+   "job": "J20",
+   "start": 745
+  },
+  {
+   "end": 804,
+   "job": "J1",
+   "start": 774
+  }
+ ],
+ "trace": "random-1"
+}

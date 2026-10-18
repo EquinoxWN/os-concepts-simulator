@@ -1,0 +1,4 @@
+{"name": "ostep-equal", "jobs": [
+ {"id": "A", "arrival": 0, "burst": 10, "priority": 0},
+ {"id": "B", "arrival": 0, "burst": 10, "priority": 0},
+ {"id": "C", "arrival": 0, "burst": 10, "priority": 0}]}

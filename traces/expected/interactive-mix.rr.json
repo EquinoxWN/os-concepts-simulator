@@ -1,0 +1,429 @@
+{
+ "algorithm": "rr",
+ "jobs": [
+  {
+   "completion": 136,
+   "id": "batch1",
+   "response": 0,
+   "slowdown": 2.2666666666666666,
+   "turnaround": 136,
+   "waiting": 76
+  },
+  {
+   "completion": 126,
+   "id": "batch2",
+   "response": 1,
+   "slowdown": 2.688888888888889,
+   "turnaround": 121,
+   "waiting": 76
+  },
+  {
+   "completion": 12,
+   "id": "edit1",
+   "response": 2,
+   "slowdown": 2.0,
+   "turnaround": 4,
+   "waiting": 2
+  },
+  {
+   "completion": 30,
+   "id": "edit2",
+   "response": 2,
+   "slowdown": 3.3333333333333335,
+   "turnaround": 10,
+   "waiting": 7
+  },
+  {
+   "completion": 27,
+   "id": "shell1",
+   "response": 5,
+   "slowdown": 6.0,
+   "turnaround": 6,
+   "waiting": 5
+  },
+  {
+   "completion": 44,
+   "id": "edit3",
+   "response": 2,
+   "slowdown": 2.0,
+   "turnaround": 4,
+   "waiting": 2
+  },
+  {
+   "completion": 105,
+   "id": "compile",
+   "response": 4,
+   "slowdown": 3.15,
+   "turnaround": 63,
+   "waiting": 43
+  },
+  {
+   "completion": 75,
+   "id": "shell2",
+   "response": 4,
+   "slowdown": 5.0,
+   "turnaround": 5,
+   "waiting": 4
+  },
+  {
+   "completion": 97,
+   "id": "edit4",
+   "response": 5,
+   "slowdown": 3.5,
+   "turnaround": 7,
+   "waiting": 5
+  },
+  {
+   "completion": 205,
+   "id": "idle-gap",
+   "response": 0,
+   "slowdown": 1.0,
+   "turnaround": 5,
+   "waiting": 0
+  }
+ ],
+ "quantum": 2,
+ "summary": {
+  "dispatches": 65,
+  "fairness": 0.8276717063741674,
+  "makespan": 205,
+  "maxSlowdown": 6.0,
+  "meanResponse": 2.5,
+  "meanTurnaround": 36.1,
+  "meanWaiting": 22.0,
+  "utilization": 0.6878048780487804
+ },
+ "timeline": [
+  {
+   "end": 6,
+   "job": "batch1",
+   "start": 0
+  },
+  {
+   "end": 8,
+   "job": "batch2",
+   "start": 6
+  },
+  {
+   "end": 10,
+   "job": "batch1",
+   "start": 8
+  },
+  {
+   "end": 12,
+   "job": "edit1",
+   "start": 10
+  },
+  {
+   "end": 14,
+   "job": "batch2",
+   "start": 12
+  },
+  {
+   "end": 16,
+   "job": "batch1",
+   "start": 14
+  },
+  {
+   "end": 18,
+   "job": "batch2",
+   "start": 16
+  },
+  {
+   "end": 20,
+   "job": "batch1",
+   "start": 18
+  },
+  {
+   "end": 22,
+   "job": "batch2",
+   "start": 20
+  },
+  {
+   "end": 24,
+   "job": "edit2",
+   "start": 22
+  },
+  {
+   "end": 26,
+   "job": "batch1",
+   "start": 24
+  },
+  {
+   "end": 27,
+   "job": "shell1",
+   "start": 26
+  },
+  {
+   "end": 29,
+   "job": "batch2",
+   "start": 27
+  },
+  {
+   "end": 30,
+   "job": "edit2",
+   "start": 29
+  },
+  {
+   "end": 32,
+   "job": "batch1",
+   "start": 30
+  },
+  {
+   "end": 34,
+   "job": "batch2",
+   "start": 32
+  },
+  {
+   "end": 36,
+   "job": "batch1",
+   "start": 34
+  },
+  {
+   "end": 38,
+   "job": "batch2",
+   "start": 36
+  },
+  {
+   "end": 40,
+   "job": "batch1",
+   "start": 38
+  },
+  {
+   "end": 42,
+   "job": "batch2",
+   "start": 40
+  },
+  {
+   "end": 44,
+   "job": "edit3",
+   "start": 42
+  },
+  {
+   "end": 46,
+   "job": "batch1",
+   "start": 44
+  },
+  {
+   "end": 48,
+   "job": "compile",
+   "start": 46
+  },
+  {
+   "end": 50,
+   "job": "batch2",
+   "start": 48
+  },
+  {
+   "end": 52,
+   "job": "batch1",
+   "start": 50
+  },
+  {
+   "end": 54,
+   "job": "compile",
+   "start": 52
+  },
+  {
+   "end": 56,
+   "job": "batch2",
+   "start": 54
+  },
+  {
+   "end": 58,
+   "job": "batch1",
+   "start": 56
+  },
+  {
+   "end": 60,
+   "job": "compile",
+   "start": 58
+  },
+  {
+   "end": 62,
+   "job": "batch2",
+   "start": 60
+  },
+  {
+   "end": 64,
+   "job": "batch1",
+   "start": 62
+  },
+  {
+   "end": 66,
+   "job": "compile",
+   "start": 64
+  },
+  {
+   "end": 68,
+   "job": "batch2",
+   "start": 66
+  },
+  {
+   "end": 70,
+   "job": "batch1",
+   "start": 68
+  },
+  {
+   "end": 72,
+   "job": "compile",
+   "start": 70
+  },
+  {
+   "end": 74,
+   "job": "batch2",
+   "start": 72
+  },
+  {
+   "end": 75,
+   "job": "shell2",
+   "start": 74
+  },
+  {
+   "end": 77,
+   "job": "batch1",
+   "start": 75
+  },
+  {
+   "end": 79,
+   "job": "compile",
+   "start": 77
+  },
+  {
+   "end": 81,
+   "job": "batch2",
+   "start": 79
+  },
+  {
+   "end": 83,
+   "job": "batch1",
+   "start": 81
+  },
+  {
+   "end": 85,
+   "job": "compile",
+   "start": 83
+  },
+  {
+   "end": 87,
+   "job": "batch2",
+   "start": 85
+  },
+  {
+   "end": 89,
+   "job": "batch1",
+   "start": 87
+  },
+  {
+   "end": 91,
+   "job": "compile",
+   "start": 89
+  },
+  {
+   "end": 93,
+   "job": "batch2",
+   "start": 91
+  },
+  {
+   "end": 95,
+   "job": "batch1",
+   "start": 93
+  },
+  {
+   "end": 97,
+   "job": "edit4",
+   "start": 95
+  },
+  {
+   "end": 99,
+   "job": "compile",
+   "start": 97
+  },
+  {
+   "end": 101,
+   "job": "batch2",
+   "start": 99
+  },
+  {
+   "end": 103,
+   "job": "batch1",
+   "start": 101
+  },
+  {
+   "end": 105,
+   "job": "compile",
+   "start": 103
+  },
+  {
+   "end": 107,
+   "job": "batch2",
+   "start": 105
+  },
+  {
+   "end": 109,
+   "job": "batch1",
+   "start": 107
+  },
+  {
+   "end": 111,
+   "job": "batch2",
+   "start": 109
+  },
+  {
+   "end": 113,
+   "job": "batch1",
+   "start": 111
+  },
+  {
+   "end": 115,
+   "job": "batch2",
+   "start": 113
+  },
+  {
+   "end": 117,
+   "job": "batch1",
+   "start": 115
+  },
+  {
+   "end": 119,
+   "job": "batch2",
+   "start": 117
+  },
+  {
+   "end": 121,
+   "job": "batch1",
+   "start": 119
+  },
+  {
+   "end": 123,
+   "job": "batch2",
+   "start": 121
+  },
+  {
+   "end": 125,
+   "job": "batch1",
+   "start": 123
+  },
+  {
+   "end": 126,
+   "job": "batch2",
+   "start": 125
+  },
+  {
+   "end": 136,
+   "job": "batch1",
+   "start": 126
+  },
+  {
+   "end": 200,
+   "job": null,
+   "start": 136
+  },
+  {
+   "end": 205,
+   "job": "idle-gap",
+   "start": 200
+  }
+ ],
+ "trace": "interactive-mix"
+}

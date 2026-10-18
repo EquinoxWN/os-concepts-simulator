@@ -1,0 +1,84 @@
+{
+ "algorithm": "fcfs",
+ "jobs": [
+  {
+   "completion": 10,
+   "id": "P1",
+   "response": 0,
+   "slowdown": 1.0,
+   "turnaround": 10,
+   "waiting": 0
+  },
+  {
+   "completion": 11,
+   "id": "P2",
+   "response": 10,
+   "slowdown": 11.0,
+   "turnaround": 11,
+   "waiting": 10
+  },
+  {
+   "completion": 13,
+   "id": "P3",
+   "response": 11,
+   "slowdown": 6.5,
+   "turnaround": 13,
+   "waiting": 11
+  },
+  {
+   "completion": 14,
+   "id": "P4",
+   "response": 13,
+   "slowdown": 14.0,
+   "turnaround": 14,
+   "waiting": 13
+  },
+  {
+   "completion": 19,
+   "id": "P5",
+   "response": 14,
+   "slowdown": 3.8,
+   "turnaround": 19,
+   "waiting": 14
+  }
+ ],
+ "quantum": null,
+ "summary": {
+  "dispatches": 5,
+  "fairness": 0.7033494355333741,
+  "makespan": 19,
+  "maxSlowdown": 14.0,
+  "meanResponse": 9.6,
+  "meanTurnaround": 13.4,
+  "meanWaiting": 9.6,
+  "utilization": 1.0
+ },
+ "timeline": [
+  {
+   "end": 10,
+   "job": "P1",
+   "start": 0
+  },
+  {
+   "end": 11,
+   "job": "P2",
+   "start": 10
+  },
+  {
+   "end": 13,
+   "job": "P3",
+   "start": 11
+  },
+  {
+   "end": 14,
+   "job": "P4",
+   "start": 13
+  },
+  {
+   "end": 19,
+   "job": "P5",
+   "start": 14
+  }
+ ],
+ "trace": "silberschatz-priority"
+}

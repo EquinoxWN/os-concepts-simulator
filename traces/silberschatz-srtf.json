@@ -1,0 +1,5 @@
+{"name": "silberschatz-srtf", "jobs": [
+ {"id": "P1", "arrival": 0, "burst": 8, "priority": 3},
+ {"id": "P2", "arrival": 1, "burst": 4, "priority": 1},
+ {"id": "P3", "arrival": 2, "burst": 9, "priority": 4},
+ {"id": "P4", "arrival": 3, "burst": 5, "priority": 2}]}

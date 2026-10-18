@@ -1,0 +1,154 @@
+{
+ "algorithm": "sjf",
+ "jobs": [
+  {
+   "completion": 60,
+   "id": "batch1",
+   "response": 0,
+   "slowdown": 1.0,
+   "turnaround": 60,
+   "waiting": 0
+  },
+  {
+   "completion": 134,
+   "id": "batch2",
+   "response": 84,
+   "slowdown": 2.8666666666666667,
+   "turnaround": 129,
+   "waiting": 84
+  },
+  {
+   "completion": 63,
+   "id": "edit1",
+   "response": 53,
+   "slowdown": 27.5,
+   "turnaround": 55,
+   "waiting": 53
+  },
+  {
+   "completion": 68,
+   "id": "edit2",
+   "response": 45,
+   "slowdown": 16.0,
+   "turnaround": 48,
+   "waiting": 45
+  },
+  {
+   "completion": 61,
+   "id": "shell1",
+   "response": 39,
+   "slowdown": 40.0,
+   "turnaround": 40,
+   "waiting": 39
+  },
+  {
+   "completion": 65,
+   "id": "edit3",
+   "response": 23,
+   "slowdown": 12.5,
+   "turnaround": 25,
+   "waiting": 23
+  },
+  {
+   "completion": 88,
+   "id": "compile",
+   "response": 26,
+   "slowdown": 2.3,
+   "turnaround": 46,
+   "waiting": 26
+  },
+  {
+   "completion": 89,
+   "id": "shell2",
+   "response": 18,
+   "slowdown": 19.0,
+   "turnaround": 19,
+   "waiting": 18
+  },
+  {
+   "completion": 136,
+   "id": "edit4",
+   "response": 44,
+   "slowdown": 23.0,
+   "turnaround": 46,
+   "waiting": 44
+  },
+  {
+   "completion": 205,
+   "id": "idle-gap",
+   "response": 0,
+   "slowdown": 1.0,
+   "turnaround": 5,
+   "waiting": 0
+  }
+ ],
+ "quantum": null,
+ "summary": {
+  "dispatches": 10,
+  "fairness": 0.5735796543102947,
+  "makespan": 205,
+  "maxSlowdown": 40.0,
+  "meanResponse": 33.2,
+  "meanTurnaround": 47.3,
+  "meanWaiting": 33.2,
+  "utilization": 0.6878048780487804
+ },
+ "timeline": [
+  {
+   "end": 60,
+   "job": "batch1",
+   "start": 0
+  },
+  {
+   "end": 61,
+   "job": "shell1",
+   "start": 60
+  },
+  {
+   "end": 63,
+   "job": "edit1",
+   "start": 61
+  },
+  {
+   "end": 65,
+   "job": "edit3",
+   "start": 63
+  },
+  {
+   "end": 68,
+   "job": "edit2",
+   "start": 65
+  },
+  {
+   "end": 88,
+   "job": "compile",
+   "start": 68
+  },
+  {
+   "end": 89,
+   "job": "shell2",
+   "start": 88
+  },
+  {
+   "end": 134,
+   "job": "batch2",
+   "start": 89
+  },
+  {
+   "end": 136,
+   "job": "edit4",
+   "start": 134
+  },
+  {
+   "end": 200,
+   "job": null,
+   "start": 136
+  },
+  {
+   "end": 205,
+   "job": "idle-gap",
+   "start": 200
+  }
+ ],
+ "trace": "interactive-mix"
+}

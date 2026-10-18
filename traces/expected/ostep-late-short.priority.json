@@ -1,0 +1,58 @@
+{
+ "algorithm": "priority",
+ "jobs": [
+  {
+   "completion": 100,
+   "id": "A",
+   "response": 0,
+   "slowdown": 1.0,
+   "turnaround": 100,
+   "waiting": 0
+  },
+  {
+   "completion": 110,
+   "id": "B",
+   "response": 90,
+   "slowdown": 10.0,
+   "turnaround": 100,
+   "waiting": 90
+  },
+  {
+   "completion": 120,
+   "id": "C",
+   "response": 100,
+   "slowdown": 11.0,
+   "turnaround": 110,
+   "waiting": 100
+  }
+ ],
+ "quantum": null,
+ "summary": {
+  "dispatches": 3,
+  "fairness": 0.7267267267267268,
+  "makespan": 120,
+  "maxSlowdown": 11.0,
+  "meanResponse": 63.333333333333336,
+  "meanTurnaround": 103.33333333333333,
+  "meanWaiting": 63.333333333333336,
+  "utilization": 1.0
+ },
+ "timeline": [
+  {
+   "end": 100,
+   "job": "A",
+   "start": 0
+  },
+  {
+   "end": 110,
+   "job": "B",
+   "start": 100
+  },
+  {
+   "end": 120,
+   "job": "C",
+   "start": 110
+  }
+ ],
+ "trace": "ostep-late-short"
+}

@@ -1,0 +1,71 @@
+{
+ "algorithm": "priority",
+ "jobs": [
+  {
+   "completion": 8,
+   "id": "P1",
+   "response": 0,
+   "slowdown": 1.0,
+   "turnaround": 8,
+   "waiting": 0
+  },
+  {
+   "completion": 12,
+   "id": "P2",
+   "response": 7,
+   "slowdown": 2.75,
+   "turnaround": 11,
+   "waiting": 7
+  },
+  {
+   "completion": 26,
+   "id": "P3",
+   "response": 15,
+   "slowdown": 2.6666666666666665,
+   "turnaround": 24,
+   "waiting": 15
+  },
+  {
+   "completion": 17,
+   "id": "P4",
+   "response": 9,
+   "slowdown": 2.8,
+   "turnaround": 14,
+   "waiting": 9
+  }
+ ],
+ "quantum": null,
+ "summary": {
+  "dispatches": 4,
+  "fairness": 0.9031677869791725,
+  "makespan": 26,
+  "maxSlowdown": 2.8,
+  "meanResponse": 7.75,
+  "meanTurnaround": 14.25,
+  "meanWaiting": 7.75,
+  "utilization": 1.0
+ },
+ "timeline": [
+  {
+   "end": 8,
+   "job": "P1",
+   "start": 0
+  },
+  {
+   "end": 12,
+   "job": "P2",
+   "start": 8
+  },
+  {
+   "end": 17,
+   "job": "P4",
+   "start": 12
+  },
+  {
+   "end": 26,
+   "job": "P3",
+   "start": 17
+  }
+ ],
+ "trace": "silberschatz-srtf"
+}

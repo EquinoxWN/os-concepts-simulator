@@ -1,0 +1,21 @@
+{
+  "name": "os-concepts-simulator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Makes CPU scheduling, paging and file systems clickable: an interactive simulator you can pause and step through, no server needed.",
+  "type": "module",
+  "scripts": {
+    "lint": "tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.build.json && node -e \"require('node:fs').cpSync('src/web/index.html','dist/web/index.html')\"",
+    "test": "node --test \"test/*.test.ts\"",
+    "serve": "node scripts/serve.ts",
+    "compare": "node scripts/compare.ts"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.1",
+    "typescript": "7.0.2"
+  }
+}

@@ -1,0 +1,84 @@
+{
+ "algorithm": "priority",
+ "jobs": [
+  {
+   "completion": 16,
+   "id": "P1",
+   "response": 6,
+   "slowdown": 1.6,
+   "turnaround": 16,
+   "waiting": 6
+  },
+  {
+   "completion": 1,
+   "id": "P2",
+   "response": 0,
+   "slowdown": 1.0,
+   "turnaround": 1,
+   "waiting": 0
+  },
+  {
+   "completion": 18,
+   "id": "P3",
+   "response": 16,
+   "slowdown": 9.0,
+   "turnaround": 18,
+   "waiting": 16
+  },
+  {
+   "completion": 19,
+   "id": "P4",
+   "response": 18,
+   "slowdown": 19.0,
+   "turnaround": 19,
+   "waiting": 18
+  },
+  {
+   "completion": 6,
+   "id": "P5",
+   "response": 1,
+   "slowdown": 1.2,
+   "turnaround": 6,
+   "waiting": 1
+  }
+ ],
+ "quantum": null,
+ "summary": {
+  "dispatches": 5,
+  "fairness": 0.4524563758389262,
+  "makespan": 19,
+  "maxSlowdown": 19.0,
+  "meanResponse": 8.2,
+  "meanTurnaround": 12.0,
+  "meanWaiting": 8.2,
+  "utilization": 1.0
+ },
+ "timeline": [
+  {
+   "end": 1,
+   "job": "P2",
+   "start": 0
+  },
+  {
+   "end": 6,
+   "job": "P5",
+   "start": 1
+  },
+  {
+   "end": 16,
+   "job": "P1",
+   "start": 6
+  },
+  {
+   "end": 18,
+   "job": "P3",
+   "start": 16
+  },
+  {
+   "end": 19,
+   "job": "P4",
+   "start": 18
+  }
+ ],
+ "trace": "silberschatz-priority"
+}

@@ -1,0 +1,123 @@
+{
+ "algorithm": "rr",
+ "jobs": [
+  {
+   "completion": 120,
+   "id": "A",
+   "response": 0,
+   "slowdown": 1.2,
+   "turnaround": 120,
+   "waiting": 20
+  },
+  {
+   "completion": 36,
+   "id": "B",
+   "response": 0,
+   "slowdown": 2.6,
+   "turnaround": 26,
+   "waiting": 16
+  },
+  {
+   "completion": 38,
+   "id": "C",
+   "response": 2,
+   "slowdown": 2.8,
+   "turnaround": 28,
+   "waiting": 18
+  }
+ ],
+ "quantum": 2,
+ "summary": {
+  "dispatches": 16,
+  "fairness": 0.9052369077306732,
+  "makespan": 120,
+  "maxSlowdown": 2.8,
+  "meanResponse": 0.6666666666666666,
+  "meanTurnaround": 58.0,
+  "meanWaiting": 18.0,
+  "utilization": 1.0
+ },
+ "timeline": [
+  {
+   "end": 10,
+   "job": "A",
+   "start": 0
+  },
+  {
+   "end": 12,
+   "job": "B",
+   "start": 10
+  },
+  {
+   "end": 14,
+   "job": "C",
+   "start": 12
+  },
+  {
+   "end": 16,
+   "job": "A",
+   "start": 14
+  },
+  {
+   "end": 18,
+   "job": "B",
+   "start": 16
+  },
+  {
+   "end": 20,
+   "job": "C",
+   "start": 18
+  },
+  {
+   "end": 22,
+   "job": "A",
+   "start": 20
+  },
+  {
+   "end": 24,
+   "job": "B",
+   "start": 22
+  },
+  {
+   "end": 26,
+   "job": "C",
+   "start": 24
+  },
+  {
+   "end": 28,
+   "job": "A",
+   "start": 26
+  },
+  {
+   "end": 30,
+   "job": "B",
+   "start": 28
+  },
+  {
+   "end": 32,
+   "job": "C",
+   "start": 30
+  },
+  {
+   "end": 34,
+   "job": "A",
+   "start": 32
+  },
+  {
+   "end": 36,
+   "job": "B",
+   "start": 34
+  },
+  {
+   "end": 38,
+   "job": "C",
+   "start": 36
+  },
+  {
+   "end": 120,
+   "job": "A",
+   "start": 38
+  }
+ ],
+ "trace": "ostep-late-short"
+}

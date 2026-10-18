@@ -1,0 +1,4 @@
+{"name": "ostep-late-short", "jobs": [
+ {"id": "A", "arrival": 0, "burst": 100, "priority": 2},
+ {"id": "B", "arrival": 10, "burst": 10, "priority": 0},
+ {"id": "C", "arrival": 10, "burst": 10, "priority": 1}]}

@@ -1,0 +1,58 @@
+{
+ "algorithm": "fcfs",
+ "jobs": [
+  {
+   "completion": 10,
+   "id": "A",
+   "response": 0,
+   "slowdown": 1.0,
+   "turnaround": 10,
+   "waiting": 0
+  },
+  {
+   "completion": 20,
+   "id": "B",
+   "response": 10,
+   "slowdown": 2.0,
+   "turnaround": 20,
+   "waiting": 10
+  },
+  {
+   "completion": 30,
+   "id": "C",
+   "response": 20,
+   "slowdown": 3.0,
+   "turnaround": 30,
+   "waiting": 20
+  }
+ ],
+ "quantum": null,
+ "summary": {
+  "dispatches": 3,
+  "fairness": 0.8571428571428571,
+  "makespan": 30,
+  "maxSlowdown": 3.0,
+  "meanResponse": 10.0,
+  "meanTurnaround": 20.0,
+  "meanWaiting": 10.0,
+  "utilization": 1.0
+ },
+ "timeline": [
+  {
+   "end": 10,
+   "job": "A",
+   "start": 0
+  },
+  {
+   "end": 20,
+   "job": "B",
+   "start": 10
+  },
+  {
+   "end": 30,
+   "job": "C",
+   "start": 20
+  }
+ ],
+ "trace": "ostep-equal"
+}
