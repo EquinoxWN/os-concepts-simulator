@@ -118,3 +118,17 @@ def test_cli_check_detects_stale_files(tmp_path: Path) -> None:
     assert cli.main([str(traces), str(exp), "--check"]) == 1
     with pytest.raises(ValueError, match="unknown algorithm"):
         result("t", [Job("A", 0, 1)], "lottery")
+
+
+def test_cli_refuses_a_bad_trace_with_a_message(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
+    traces = tmp_path / "traces"
+    traces.mkdir()
+    for name, text in {
+        "broken.json": "{",
+        "invalid.json": json.dumps({"name": "t", "jobs": [{"id": "A", "arrival": 0, "burst": 0}]}),
+    }.items():
+        for f in traces.glob("*.json"):
+            f.unlink()
+        (traces / name).write_text(text, encoding="utf-8")
+        assert cli.main([str(traces), str(tmp_path / "expected")]) == 2
+        assert name in capsys.readouterr().err

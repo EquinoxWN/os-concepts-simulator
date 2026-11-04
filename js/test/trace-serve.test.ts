@@ -1,12 +1,12 @@
 import assert from "node:assert/strict";
 import { once } from "node:events";
-import { mkdtempSync, mkdirSync, writeFileSync } from "node:fs";
+import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
 import type { AddressInfo } from "node:net";
 import { tmpdir } from "node:os";
 import { join, resolve, sep } from "node:path";
 import test from "node:test";
 
-import { resolveStatic, serve } from "../scripts/serve.ts";
+import { parsePort, resolveStatic, serve } from "../scripts/serve.ts";
 import { LIMITS, mulberry32, parseTrace, randomTrace } from "../src/engine/trace.ts";
 
 test("parseTrace accepts a good trace and defaults the priority", () => {
@@ -30,6 +30,10 @@ test("parseTrace refuses every malformed input with a reason", () => {
     [{ name: "t", jobs: Array.from({ length: 101 }, (_, i) => ({ id: `J${i}`, arrival: 0, burst: LIMITS.burst })) }, /total burst/],
   ];
   for (const [value, msg] of cases) assert.throws(() => parseTrace(value), msg);
+  // The total-burst cap is inclusive: exactly LIMITS.totalBurst passes, one tick more does not.
+  const full = Array.from({ length: LIMITS.totalBurst / LIMITS.burst }, (_, i) => ({ id: `J${i}`, arrival: 0, burst: LIMITS.burst }));
+  assert.equal(parseTrace({ name: "t", jobs: full }).jobs.length, full.length);
+  assert.throws(() => parseTrace({ name: "t", jobs: [...full, { id: "X", arrival: 0, burst: 1 }] }), /total burst/);
 });
 
 test("mulberry32 and randomTrace are deterministic per seed", () => {
@@ -70,5 +74,30 @@ test("the static server answers 200 for files and 404 otherwise, on loopback onl
     assert.equal((await fetch(`http://127.0.0.1:${addr.port}/web/`, { method: "POST" })).status, 404);
   } finally {
     server.close();
+    rmSync(root, { recursive: true, force: true });
   }
+});
+
+test("a directory with a servable name answers 404 and the server keeps serving", async () => {
+  const root = mkdtempSync(join(tmpdir(), "osim-"));
+  mkdirSync(join(root, "web"));
+  mkdirSync(join(root, "web", "dir.js")); // passes the type check but is not a file
+  writeFileSync(join(root, "web", "index.html"), "<p>hi</p>");
+  const server = serve(root, 0);
+  await once(server, "listening");
+  try {
+    const port = (server.address() as AddressInfo).port;
+    assert.equal((await fetch(`http://127.0.0.1:${port}/web/dir.js`)).status, 404);
+    assert.equal((await fetch(`http://127.0.0.1:${port}/web/`)).status, 200);
+  } finally {
+    server.close();
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test("parsePort accepts 0..65535 and refuses anything else", () => {
+  assert.equal(parsePort(undefined), 8080);
+  assert.equal(parsePort("0"), 0);
+  assert.equal(parsePort("65535"), 65535);
+  for (const bad of ["", "-1", "65536", "80.5", "abc", "1e3"]) assert.throws(() => parsePort(bad), /port/, bad);
 });

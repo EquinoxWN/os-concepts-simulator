@@ -21,7 +21,7 @@ server on 127.0.0.1:
 
 ![the page after "Run all algorithms": table and timelines from the worker](docs/proof/browser.jpg)
 
-41 tests pass: textbook results, 200 random workloads, every trace against an independent Python
+41 tests passed at M1 (44 since the [2026-11-01 quality pass](docs/quality/2026-11-01.md)): textbook results, 200 random workloads, every trace against an independent Python
 reference, and a real worker thread; tsc strict, ruff, mypy, npm audit and pip-audit are clean:
 
 ![tsc, ruff, mypy, node --test, pytest, build and audit output](docs/proof/tests.jpg)
@@ -107,7 +107,7 @@ in git-ignored `js/dist`.
 python -m venv python/.venv && . python/.venv/Scripts/activate   # Linux/macOS: python/.venv/bin/activate
 make setup     # npm ci, pip install -e python[dev]
 make lint      # tsc strict, ruff, mypy, expected outputs current
-make test      # 26 TypeScript + 15 Python tests
+make test      # 28 TypeScript + 16 Python tests
 make bench     # every algorithm on every trace
 make serve     # build, then http://127.0.0.1:8080/web/
 make audit     # npm audit, pip-audit
@@ -120,15 +120,15 @@ Latest local run (full detail in [docs/results/m1.md](docs/results/m1.md)):
 
 | Test file | Tests | What it proves |
 |---|---|---|
-| `js/test/engine.test.ts` | 8 | OSTEP and Operating System Concepts results, round-robin conventions, step = run with pause and resume, invariants and SRTF optimality on 200 random workloads |
+| `js/test/engine.test.ts` | 8 | OSTEP and Operating System Concepts results, round-robin conventions, step = run with pause and resume, invariants and SRTF optimality on 200 random workloads, quantum bounds 1..1000 |
 | `js/test/reference.test.ts` | 10 | All 45 trace and algorithm pairs equal the Python reference |
 | `js/test/worker.test.ts` | 3 | Worker handler, error replies for 9 bad messages, a real thread boundary |
-| `js/test/trace-serve.test.ts` | 5 | Trace validation and limits, deterministic generator, server path safety and loopback |
-| `python/tests/test_reference.py` | 15 | The reference against the same textbook results, invariants, bad traces, stale-file check |
+| `js/test/trace-serve.test.ts` | 7 | Trace validation and limits (the total-burst cap is inclusive), deterministic generator, server path safety and loopback, directories refused, port argument checked |
+| `python/tests/test_reference.py` | 16 | The reference against the same textbook results, invariants, bad traces, stale-file check, a bad trace file reported with its name |
 
 | Check | Result |
 |---|---|
-| Tests | 41 passed, 0 failed (26 TypeScript, 15 Python) |
+| Tests | 44 passed, 0 failed (28 TypeScript, 16 Python) |
 | Lint and types | tsc strict, ruff, ruff format, mypy --strict: clean |
 | Reference outputs | 45 of 45 current; engine matches all |
 | Audit | npm audit: 0 vulnerabilities; pip-audit: none |
@@ -187,6 +187,7 @@ What this repo must show before it counts as done:
 - [ADR 0001: record architecture decisions](docs/adr/0001-record-architecture-decisions.md)
 - [ADR 0002: test the TypeScript engine against a Python reference, built in M1](docs/adr/0002-python-reference-as-test-oracle.md)
 - [M1 results](docs/results/m1.md)
+- [Quality check 2026-11-01](docs/quality/2026-11-01.md): the ten quality rules with evidence and a mutation table
 
 ## Scope
 

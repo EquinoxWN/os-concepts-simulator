@@ -118,4 +118,6 @@ test("bad algorithm and quantum are refused", () => {
   assert.throws(() => simulate(t, "lottery" as never), /unknown algorithm/);
   assert.throws(() => simulate(t, "rr", { quantum: 0 }), /quantum/);
   assert.throws(() => simulate(t, "rr", { quantum: 1.5 }), /quantum/);
+  assert.throws(() => simulate(t, "rr", { quantum: 1001 }), /quantum/);
+  assert.equal(simulate(t, "rr", { quantum: 1000 }).quantum, 1000);
 });
