@@ -39,7 +39,11 @@ def main(argv: list[str] | None = None) -> int:
         if f.stat().st_size > MAX_FILE:
             print(f"{f.name}: larger than {MAX_FILE} bytes", file=sys.stderr)
             return 2
-        name, jobs = parse_trace(json.loads(f.read_text(encoding="utf-8")))
+        try:
+            name, jobs = parse_trace(json.loads(f.read_text(encoding="utf-8")))
+        except ValueError as e:  # json.JSONDecodeError is a ValueError
+            print(f"{f.name}: {e}", file=sys.stderr)
+            return 2
         for alg in ALGORITHMS:
             out = args.expected / f"{f.stem}.{alg}.json"
             text = render(result(name, jobs, alg, DEFAULT_QUANTUM))

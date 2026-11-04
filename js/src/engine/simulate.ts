@@ -66,6 +66,8 @@ export class Simulation {
     const arrived = this.admit();
     if (this.running === null && this.ready.length === 0) {
       const until = this.arrivals[this.next]!.job.arrival;
+      // Fail fast instead of looping forever if a future change breaks admission.
+      if (until <= this.now) throw new Error(`internal: idle step at ${this.now} does not advance time`);
       const event: StepEvent = { time: this.now, running: null, ticks: until - this.now, arrived, finished: null, ready: [] };
       this.record(null, this.now, until);
       this.now = until;

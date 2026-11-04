@@ -43,18 +43,33 @@ export function serve(root: string, port: number): Server {
       res.writeHead(404, { "Content-Type": "text/plain" }).end("not found");
       return;
     }
-    res.writeHead(200, {
-      "Content-Type": TYPES[extname(file)]!,
-      "X-Content-Type-Options": "nosniff",
-      "Cache-Control": "no-store",
+    const stream = createReadStream(file);
+    stream.once("open", () => {
+      res.writeHead(200, {
+        "Content-Type": TYPES[extname(file)]!,
+        "X-Content-Type-Options": "nosniff",
+        "Cache-Control": "no-store",
+      });
+      stream.pipe(res);
     });
-    createReadStream(file).pipe(res);
+    // A read error (file removed after the stat, permissions) must not crash the server.
+    stream.once("error", () => {
+      if (res.headersSent) res.destroy();
+      else res.writeHead(500, { "Content-Type": "text/plain" }).end("read error");
+    });
   });
   return server.listen(port, "127.0.0.1");
 }
 
+/** The port from the command line: an integer in 0..65535, 8080 when absent. */
+export function parsePort(arg: string | undefined): number {
+  if (arg === undefined) return 8080;
+  if (!/^[0-9]{1,5}$/.test(arg) || Number(arg) > 65535) throw new Error(`port must be an integer in 0..65535, got ${JSON.stringify(arg)}`);
+  return Number(arg);
+}
+
 if (import.meta.main) {
-  const port = Number(process.argv[2] ?? 8080);
+  const port = parsePort(process.argv[2]);
   const root = resolve(import.meta.dirname, "..", "dist");
   const server = serve(root, port);
   server.on("listening", () => {

@@ -101,6 +101,8 @@ def simulate(jobs: list[Job], alg: str, quantum: int = DEFAULT_QUANTUM) -> tuple
             nxt += 1
         if running is None and not ready:
             until = pending[nxt].job.arrival
+            if until <= now:  # fail fast instead of looping forever if admission breaks
+                raise RuntimeError(f"internal: idle step at {now} does not advance time")
             run.record(None, now, until)
             now = until
             continue
