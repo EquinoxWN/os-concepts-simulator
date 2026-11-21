@@ -27,3 +27,10 @@ CLAUDE.md
 .mypy_cache/
 js/.tmp/
 python/.tmp/
+# secrets
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.tfstate
